@@ -11,9 +11,9 @@ namespace ejercicio_3
 		public static void Main(string[] args)
 		{
 			double primerNumero, segundoNumero, resultado;
-			Console.WriteLine("Ingrese el primer numero. Si el número no es entero ingréselo con un punto en lugar de una coma. Ej: 1.23");
+			Console.WriteLine("Ingrese el primer numero. Si el número no es entero ingréselo con una coma. Ej: 1,23");
 			primerNumero = double.Parse(Console.ReadLine());
-			Console.WriteLine("Ingrese el segundo numero. Si el número no es entero ingréselo con un punto en lugar de una coma. Ej: 1.23");
+			Console.WriteLine("Ingrese el segundo numero. Si el número no es entero ingréselo con una coma. Ej: 1,23");
 			segundoNumero = double.Parse(Console.ReadLine());
 			resultado = primerNumero + segundoNumero;
 			Console.WriteLine("La suma es: {0}", resultado);
