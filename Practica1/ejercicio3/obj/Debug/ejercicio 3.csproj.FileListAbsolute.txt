@@ -1,0 +1,6 @@
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica1\ejercicio 3\bin\Debug\ejercicio 3.exe.config
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica1\ejercicio 3\bin\Debug\ejercicio 3.exe
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica1\ejercicio 3\bin\Debug\ejercicio 3.pdb
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica1\ejercicio 3\obj\Debug\ejercicio 3.csprojResolveAssemblyReference.cache
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica1\ejercicio 3\obj\Debug\ejercicio 3.exe
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica1\ejercicio 3\obj\Debug\ejercicio 3.pdb

@@ -1,0 +1,6 @@
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica1\ejercicio5\obj\Debug\ejercicio5.csprojResolveAssemblyReference.cache
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica1\ejercicio5\bin\Debug\ejercicio5.exe.config
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica1\ejercicio5\bin\Debug\ejercicio5.exe
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica1\ejercicio5\bin\Debug\ejercicio5.pdb
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica1\ejercicio5\obj\Debug\ejercicio5.exe
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica1\ejercicio5\obj\Debug\ejercicio5.pdb
