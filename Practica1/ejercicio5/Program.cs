@@ -27,7 +27,7 @@ namespace ejercicio5
 				}
 				cantidadDeNumerosIngresados++;
 				
-				Console.WriteLine("Para dejar de ingresar numeros oprima 'F', para continuar oprima cualquier otro caracter");
+				Console.WriteLine("¿Desea seguir ingresando más números? Para hacerlo oprima 'S'y para terminar oprima 'F'");
 				caracterCentinela = Console.ReadLine();
 			}
 			
