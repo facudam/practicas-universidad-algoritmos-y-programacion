@@ -9,13 +9,10 @@ namespace ejercicio6
 	{
 		public static void Main(string[] args)
 		{
-			int numeros = 40;
-			
-			while (numeros != 353) {
+			for (int numeros = 40; numeros <= 352; numeros++) {
 				if ((numeros % 2) != 0 && (numeros % 3) == 0) {
 					Console.WriteLine(numeros);
 				}
-				numeros++;
 			}
 			
 			Console.Write("Press any key to continue . . . ");
