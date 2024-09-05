@@ -15,7 +15,7 @@ namespace Ejercicio1
 		{
 			//int i = 0; Doble declaración.
 			for (int i=1; i<=10;) {
-				Console.WriteLine(i++);
+				Console.WriteLine(i++); // En cada vuelta imprime el valor actual y lo aumenta +1.
 			}
 			
 			Console.Write("Press any key to continue . . . ");
