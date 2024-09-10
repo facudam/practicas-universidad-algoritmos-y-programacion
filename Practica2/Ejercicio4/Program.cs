@@ -35,12 +35,15 @@ namespace Ejercicio4
 			double promedioCaracteresPorPalabra = Convert.ToDouble(totalCaracteres) / wordsList.Count;
 			
 			Console.WriteLine("total caracteres: " + totalCaracteres);
-			Console.WriteLine("El porcentaje de palabras que comienzan con S es: {0}%", porcentajePalabrasConS);
-			Console.WriteLine("El promedio de caracteres por palabra es: {0}", promedioCaracteresPorPalabra);
 			
-			foreach(string word in wordsList) {
-				Console.WriteLine("La longitud de la palabra {0} es: {1}", word, word.Length);
+			if (wordsList.Count != 0) {
+				Console.WriteLine("El porcentaje de palabras que comienzan con S es: {0}%", porcentajePalabrasConS);
+				Console.WriteLine("El promedio de caracteres por palabra es: {0}", promedioCaracteresPorPalabra);
+				foreach(string word in wordsList) {
+					Console.WriteLine("La longitud de la palabra {0} es: {1}", word, word.Length);
+				}
 			}
+			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
