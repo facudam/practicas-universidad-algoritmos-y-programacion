@@ -14,7 +14,7 @@ namespace Ejercicio3
 			DateTime fecha1 = new DateTime(2000, 10, 15);
 			Person hombre = new Person("Carlos", fecha1, "45098123");
 			
-			hombre.ImprimirEdad();
+			hombre.ImprimirLaEdad();
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
