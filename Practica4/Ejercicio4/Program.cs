@@ -17,13 +17,13 @@ namespace Ejercicio4
 			DateTime fecha2 = new DateTime(2001, 04, 26);
 			Person mujer = new Person("Monica", fecha2, "46134654");
 			
-			imprimirNombreYDniEntre_Y_(hombre, mujer);
+			imprimirNombreYDniDelMenorEntre_Y_(hombre, mujer);
 			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
 		
-		public static void imprimirNombreYDniEntre_Y_(Person persona1, Person persona2) {
+		public static void imprimirNombreYDniDelMenorEntre_Y_(Person persona1, Person persona2) {
 			if(persona1.esMayorQue(persona2)) {
 				Console.WriteLine("El nombre del menor es: {0} y su dni es: {1}", persona2.Nombre, persona2.Dni);
 			} else {
