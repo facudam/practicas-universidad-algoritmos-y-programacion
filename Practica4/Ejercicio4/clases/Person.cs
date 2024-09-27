@@ -1,11 +1,13 @@
 ﻿
 using System;
 
-namespace Ejercicio3.clases
+namespace Ejercicio4.clases
 {
+	
 	public class Person
 	{
-		
+		public Person() {
+		}
 		
 		public Person(string nombre, DateTime fechaNacimiento, string dni) {
 			this.nombre = nombre;
@@ -19,6 +21,43 @@ namespace Ejercicio3.clases
 		private string dni;
 		private int edad;
 		
+		// Definimos las propiedades:
+		
+		public int Edad {
+			get {
+				return obtenerEdad(); //Así calculamos la edad cada vez que la llamamos.
+			}
+		}
+		
+		public string Nombre {
+			get {
+				return nombre;
+			}
+			set {
+				nombre = value;
+			}
+		}
+		
+		public DateTime FechaNacimiento {
+			get {
+				return fechaNacimiento;
+			}
+			set {
+				fechaNacimiento = value;
+			}
+		}
+		
+		public string Dni {
+			get {
+				return dni;
+			}
+			set {
+				dni = value;
+			}
+		}
+		
+		
+		
 		public int obtenerEdad() {
 			DateTime fechaActual = DateTime.Now; // No se utiliza el new.
 			int edadDePersona = fechaActual.Year - fechaNacimiento.Year;
@@ -31,6 +70,10 @@ namespace Ejercicio3.clases
 		
 		public void ImprimirLaEdad() {
 			Console.WriteLine("{0} tiene {1} años", nombre, edad);
+		}
+		
+		public bool esMayorQue(Person persona2) {
+			return (DateTime.Compare(fechaNacimiento, persona2.FechaNacimiento) < 0);
 		}
 		
 	}
