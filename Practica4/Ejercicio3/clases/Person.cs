@@ -19,7 +19,7 @@ namespace Ejercicio3.clases
 		private string dni;
 		private int edad;
 		
-		public int obtenerEdad() {
+		private int obtenerEdad() {
 			DateTime fechaActual = DateTime.Now; // No se utiliza el new.
 			int edadDePersona = fechaActual.Year - fechaNacimiento.Year;
 			if (DateTime.Compare(fechaActual, fechaNacimiento.AddYears(edadDePersona)) < 0) { // DateTime.Compare devuelve un negativo si la primer fecha es anterior a la segunda, un 0 si son iguales y un positivo si es posterior.
