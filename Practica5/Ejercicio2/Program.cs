@@ -33,12 +33,12 @@ namespace Ejercicio2
 					case "3":
 						showStudentsEnrolledInSubjet(listaDeAlumnos);
 						break;
-//					case "4":
-//						showSubjectsListByStudent(listaDeAlumnos, alumno);
-//						break;
-//					case "5":
-//						showTotalListOfStudents(listaDeAlumnos);
-//						break;
+					case "4":
+						showSubjectsListByStudent(listaDeAlumnos);
+						break;
+					case "5":
+						showTotalListOfStudents(listaDeAlumnos);
+						break;
 //					case "6":
 //						unEnrollStudentBySubject(ref listaDeAlumnos, alumno, materia);
 //						break;
@@ -136,6 +136,43 @@ namespace Ejercicio2
 				}
 			}
 			return estaAnotado;
+		}
+		
+		public static void showSubjectsListByStudent(ArrayList listaDeAlumnos) {
+			bool existeAlumnoEnLista = false;
+			Console.WriteLine("Ingrese el DNI del alumno");
+			string dni = Console.ReadLine();
+			
+			foreach(Alumno alumno in listaDeAlumnos) {
+				if (alumno.Dni == dni) {
+					mostrarListadoDeMateriasAnotadas(alumno);
+					existeAlumnoEnLista = true;
+					break;
+				}
+			}
+			if (!existeAlumnoEnLista) Console.WriteLine("No existe un alumno con el DNI {0}", dni);
+		}
+		
+		public static void mostrarListadoDeMateriasAnotadas(Alumno alumno) {
+			if (alumno.ListaDeHorarios.Count != 0) {
+				Console.WriteLine("\nLista de materias que cursa {0}, {1}:", alumno.Apellido, alumno.Nombre);
+				foreach(Horario materia in alumno.ListaDeHorarios) {
+					Console.WriteLine(materia.Materia);
+				}
+			} else {
+				Console.WriteLine("\nEl alumno {0}, {1} no está inscripto en ninguna materia.", alumno.Apellido, alumno.Nombre);
+			}
+		}
+		
+		public static void showTotalListOfStudents(ArrayList listaDeAlumnos) {
+			if (listaDeAlumnos.Count != 0) {
+				Console.WriteLine("\nLista de alumnos:");
+				foreach(Alumno alumno in listaDeAlumnos) {
+					Console.WriteLine("{0}, {1}", alumno.Apellido, alumno.Nombre);
+				}
+			} else {
+				Console.WriteLine("\nAún no hay alumnos ingresados al sistema");
+			}
 		}
 	}
 }
