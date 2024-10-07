@@ -66,16 +66,16 @@ namespace Ejercicio2.clases
 			bool esMateriaInscripta = false;
 			foreach(Horario elemento in listaDeHorarios) {
 				if (elemento.Dia == materia.Dia && elemento.Hora == materia.Hora && elemento.Materia == materia.Materia) {
-					listaDeHorarios.Remove(materia);
-					Console.WriteLine("La materia {0} se ha eliminado de la lista correctamente", materia.Materia);
+					listaDeHorarios.Remove(elemento);
+					Console.WriteLine("\nLa materia {0} se ha eliminado de la lista correctamente.", materia.Materia);
 					esMateriaInscripta = true;
+					break;
 				}
 				
 				if (!esMateriaInscripta) 
-					Console.WriteLine("No se ha encontrado la materia {0}, en el dia y hora indicado", materia.Materia);
+					Console.WriteLine("\nNo se ha encontrado la materia {0}, en el dia y hora indicado.", materia.Materia);
 			}
 		}
-		
 		
 		
 	}

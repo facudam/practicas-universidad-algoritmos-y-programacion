@@ -39,9 +39,9 @@ namespace Ejercicio2
 					case "5":
 						showTotalListOfStudents(listaDeAlumnos);
 						break;
-//					case "6":
-//						unEnrollStudentBySubject(ref listaDeAlumnos, alumno, materia);
-//						break;
+					case "6":
+						unEnrollStudentBySubjectInList(ref listaDeAlumnos);
+						break;
 					case "7":
 						answer = "7";
 						break;
@@ -173,6 +173,31 @@ namespace Ejercicio2
 			} else {
 				Console.WriteLine("\nAún no hay alumnos ingresados al sistema");
 			}
+		}
+		
+		public static void unEnrollStudentBySubjectInList(ref ArrayList listaDeAlumnos) {
+			string dni, materia, dia, hora;
+			bool esAlumnoEnLista = false;
+			
+			Console.WriteLine("\nIngrese el DNI del alumno");
+			dni = Console.ReadLine();
+			
+			foreach(Alumno alumno in listaDeAlumnos) {
+				if(alumno.Dni == dni) {
+					Console.WriteLine("\nIngrese el nombre de la materia");
+					materia = Console.ReadLine();
+					Console.WriteLine("\nIngrese el dia de la cursada");
+					dia = Console.ReadLine();
+					Console.WriteLine("\nIngrese la hora de la cursada");
+					hora = Console.ReadLine();
+					Horario materiaAEliminar = new Horario(dia, hora, materia);
+					
+					alumno.eliminarMateria(materiaAEliminar);
+					esAlumnoEnLista = true;
+					break;
+				}
+			}
+			if(!esAlumnoEnLista) Console.WriteLine("\nNo hay un alumno anotado con el DNI {0}", dni);
 		}
 	}
 }
