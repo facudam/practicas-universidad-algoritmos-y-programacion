@@ -100,6 +100,7 @@ namespace Ejercicio2
 					Horario nuevaMateria = new Horario(dia, hora, materia);
 					alumno.agregarMateria(nuevaMateria);
 					esAlumno = true;
+					break;
 				}
 			}
 			if (!esAlumno) Console.WriteLine("\nNo existe ningún alumno con el DNI: {0}\n", dni);
