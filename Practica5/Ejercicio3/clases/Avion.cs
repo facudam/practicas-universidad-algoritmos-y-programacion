@@ -11,7 +11,7 @@ namespace Ejercicio3.clases
 {
 	public class Avion
 	{
-		public Avion(string numeroVuelo, string empresa, int cantidadAsientos, string origen, string destino, string horaSalida, int cantidadEscalas, string duracionVuelo)
+		public Avion(int numeroVuelo, string empresa, int cantidadAsientos, string origen, string destino, TimeSpan horaSalida, int cantidadEscalas, double duracionVuelo)
 		{
 			this.numeroVuelo = numeroVuelo;
 			this.empresa = empresa;
@@ -24,17 +24,17 @@ namespace Ejercicio3.clases
 			this.duracionVuelo = duracionVuelo;
 		}
 		
-		private string numeroVuelo;
+		private int numeroVuelo;
 		private string empresa;
 		private int cantidadAsientos;
 		private int cantidadAsientosDisponibles;
 		private string origen;
 		private string destino;
-		private string horaSalida;
+		private TimeSpan horaSalida;
 		private int cantidadEscalas;
-		private string duracionVuelo;
+		private double duracionVuelo;
 		
-		public string NumeroDeVuelo {
+		public int NumeroDeVuelo {
 			get { return numeroVuelo; }
 			set { numeroVuelo = value; }
 		}
@@ -63,7 +63,7 @@ namespace Ejercicio3.clases
 			set { destino = value; }
 		}
 		
-		public string HoraDeSalida {
+		public TimeSpan HoraDeSalida {
 			get { return horaSalida; }
 			set { horaSalida = value; }
 		}
@@ -73,17 +73,18 @@ namespace Ejercicio3.clases
 			set { cantidadEscalas = value; }
 		}
 		
-		public string DuracionDelVuelo {
+		public double DuracionDelVuelo {
 			get { return duracionVuelo; }
 			set { duracionVuelo = value; }
 		}
 		
-		public void venderPasajes(int cantidad) {
+		public bool venderPasajes(int cantidad) {
+			bool haSidoExitosa = false;
 			if((cantidadAsientosDisponibles - cantidad) >= 0) {
 				cantidadAsientosDisponibles = cantidadAsientosDisponibles - cantidad;
-			} else {
-				Console.WriteLine("Lo sentimos, pero no hay suficientes asientos disponibles en el vuelo {0}.", numeroVuelo);
-			}
+				haSidoExitosa = true;
+			} 
+			return haSidoExitosa;
 		}
 		
 	}

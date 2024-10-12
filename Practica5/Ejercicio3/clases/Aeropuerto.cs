@@ -22,9 +22,23 @@ namespace Ejercicio3.clases
 		private string nombre, localidad;
 		private ArrayList listaDeAviones;
 		
+		public string Nombre {
+			get { return nombre; }
+			set { nombre = value; }
+		}
+		
+		public string Localidad {
+			get { return localidad; }
+			set { localidad = value; }
+		}
+		
+		public ArrayList ListaDeAviones {
+			get { return listaDeAviones; }
+		}
 		
 		public void añadirAvion(Avion nuevoAvion) {
 			listaDeAviones.Add(nuevoAvion);
 		}
+		
 	}
 }
