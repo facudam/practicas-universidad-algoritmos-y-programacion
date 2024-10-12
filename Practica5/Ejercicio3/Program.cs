@@ -25,10 +25,12 @@ namespace Ejercicio3
 			Avion nuevoAvion = new Avion(1, "Avianca", 33, "Chapelco", "Rio de Janeiro", new TimeSpan(17,30,0), 0, 3);
 			Avion otroAvion = new Avion(2, "FlyBondi", 40, "Chapelco", "Buenos Aires", new TimeSpan(21,30,0), 0, 2);
 			Avion avion = new Avion(3, "FlyBondi", 40, "Chapelco", "Rio de Janeiro", new TimeSpan(5,30,0), 1, 5);
+			Avion avion4 = new Avion(4, "Aerolineas argentinas", 20, "Chapelco", "Montevideo", new TimeSpan(13,30,0), 0, 2);
 			
 			chapelco.añadirAvion(nuevoAvion);
 			chapelco.añadirAvion(otroAvion);
 			chapelco.añadirAvion(avion);
+			chapelco.añadirAvion(avion4);
 			
 			string respuesta = "";
 			
@@ -103,9 +105,14 @@ namespace Ejercicio3
 		public static void mostrarInformación(int cantidadPasajesVendidos,int cantidadPasajesNocturnosVendidos, int totalVuelosARioConEscala, double totalHorasDeViajesARio) {
 			Console.WriteLine("La cantidad de vuelos vendidos hasta ahora es: {0}", cantidadPasajesVendidos);
 			double porcentajeVuelosNocturnos = ((double)cantidadPasajesNocturnosVendidos / cantidadPasajesVendidos) * 100;
-			Console.WriteLine("El porcentaje de vuelos nocturnos vendidos es: {0}%", porcentajeVuelosNocturnos);
+			if (!Double.IsNaN(porcentajeVuelosNocturnos)) {
+				Console.WriteLine("El porcentaje de vuelos nocturnos vendidos es: {0}%", porcentajeVuelosNocturnos);
+			}
 			double duracionPromedioDeVueloARioConEscala = totalHorasDeViajesARio / totalVuelosARioConEscala;
-			Console.WriteLine("la duración promedio de los vuelos con escalas cuyo destino es Río de Janeiro es: {0}hs", duracionPromedioDeVueloARioConEscala);
+			if (!Double.IsNaN(duracionPromedioDeVueloARioConEscala)) {
+				Console.WriteLine("la duración promedio de los vuelos con escalas cuyo destino es Río de Janeiro es: {0}hs", duracionPromedioDeVueloARioConEscala);
+			}
+			
 		}
 		
 	}
