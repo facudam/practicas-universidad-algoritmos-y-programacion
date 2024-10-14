@@ -26,12 +26,12 @@ namespace Ejercicio4
 				Console.WriteLine("\nIngrese la opción que desee realizar: \n1- Para atender clientes. \n2- Para culminar día e imprimir recaudación final, u oprima cualquier otra tecla.");
 				respuesta = Console.ReadLine();
 				
-				if (respuesta.ToLower() == "s") {
-					atenderClientes(ref recaudacionFinal, supermercado1);
+				if (respuesta.ToLower() == "1") {
+					atenderCliente(ref recaudacionFinal, supermercado1);
 				} else {
 					Console.WriteLine("La recaudación final del día es: ${0}.\nMuchas gracias por utilizar nuestro sistema.", recaudacionFinal);
 				}
-			} while (respuesta.ToLower() == "s");
+			} while (respuesta.ToLower() == "1");
 			
 			
 			Console.Write("Press any key to continue . . . ");
@@ -41,7 +41,7 @@ namespace Ejercicio4
 		public static void stockearSupermercado(Supermercado supermercado) {
 			string respuesta = "";
 			do {
-				Console.WriteLine("\nIngrese la opción que desee realizar:\n1- Añadir nuevo producto.\n2- Terminar");
+				Console.WriteLine("\nIngrese la opción que desee realizar:\n1- Añadir nuevo producto.\n2- Comenzar día laboral");
 				respuesta = Console.ReadLine();
 				
 				switch(respuesta) {
@@ -76,8 +76,63 @@ namespace Ejercicio4
 			Console.WriteLine("El producto: {0}, ha sido añadido correctamente.", nombre);
 		}
 		
-		public static void atenderClientes(ref double recaudacion, Supermercado supermercado) {
+		public static void atenderCliente(ref double recaudacionFinal, Supermercado supermercado) {
+			ArrayList productosComprados = new ArrayList();
+			double totalAPagarPorCliente = 0;
 			
+			string opcion = "";
+			do {
+				Console.WriteLine("\nIngrese la opción que desee:\n1- CobrarProducto.\n2- Imprimir ticket");
+				opcion = Console.ReadLine();
+				
+				switch(opcion) {
+					case "1":
+						cobrarProducto(ref recaudacionFinal, supermercado, ref productosComprados, ref totalAPagarPorCliente);
+						break;
+					case "2":
+						imprimirTicket(productosComprados, totalAPagarPorCliente);
+						break;
+					default:
+						Console.WriteLine("Opción incorrecta. Por favor, inténtelo de nuevo");
+						break;
+				}
+			} while (opcion != "2");
+		}
+		
+		public static void cobrarProducto(ref double recaudacion, Supermercado supermercado, ref ArrayList productosComprados, ref double totalAPagarPorCliente) {
+			Console.WriteLine("\nIngrese código del producto");
+			int codigo = int.Parse(Console.ReadLine());
+			Console.WriteLine("Ingrese cantidad a llevar");
+			int cantidad = int.Parse(Console.ReadLine());
+			
+			foreach(Producto producto in supermercado.ListaDeProductos) {
+				if (producto.Codigo == codigo) {
+					comprarProductoSiEsPosible(producto, cantidad, ref recaudacion, ref productosComprados, ref totalAPagarPorCliente);
+					break;
+				} 
+			}
+		}
+		
+		public static void comprarProductoSiEsPosible(Producto producto, int cantidad, ref double recaudacion, ref ArrayList productosComprados, ref double totalAPagarPorCliente) {
+			if (producto.venderProducto(cantidad)) {
+				recaudacion += producto.Precio * cantidad;
+				productosComprados.Add(producto);
+				totalAPagarPorCliente += producto.Precio * cantidad;
+				Console.WriteLine("Pagado...");
+			} else {
+				Console.WriteLine("Ya no quedan suficientes unidades de: {0}, del proveedor {1}.", producto.Nombre, producto.NombreProveedor);
+			}
+		}
+		
+		public static void imprimirTicket(ArrayList productosComprados, double totalAPagarPorCliente) {
+			if (productosComprados.Count > 0) {
+				Console.WriteLine("\nLista de productos comprados:");
+				foreach(Producto producto in productosComprados) {
+					Console.WriteLine("{0}, marca: {1}", producto.Nombre, producto.Marca);
+				}
+			}
+			
+			Console.WriteLine("Total a pagar: ${0}", totalAPagarPorCliente);
 		}
 	}
 }
