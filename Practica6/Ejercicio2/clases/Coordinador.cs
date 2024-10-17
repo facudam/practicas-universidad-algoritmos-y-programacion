@@ -1,6 +1,5 @@
 ﻿
 using System;
-using System.Collections;
 
 namespace Ejercicio2.clases
 {
@@ -8,7 +7,7 @@ namespace Ejercicio2.clases
 	{
 		private string area; 
 		
-		public Coordinador(int cupoDisponible, string materia, string area): base(cupoDisponible, materia)
+		public Coordinador(string materia, int cupoDisponible, string area): base(materia, cupoDisponible)
 		{
 			this.area = area;
 		}

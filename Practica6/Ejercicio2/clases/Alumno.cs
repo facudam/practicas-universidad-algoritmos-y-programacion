@@ -37,5 +37,9 @@ namespace Ejercicio2.clases
 			get { return promedio; }
 			set { promedio = value; }
 		}
+		
+		public bool mejorPromedioQue(Alumno otroAlumno) {
+			return (promedio > otroAlumno.Promedio);
+		}
 	}
 }
