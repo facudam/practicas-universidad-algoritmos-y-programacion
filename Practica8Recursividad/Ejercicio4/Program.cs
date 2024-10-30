@@ -10,9 +10,6 @@ namespace Ejercicio4
 		public static void Main(string[] args)
 		{
 			Console.WriteLine(cantidadDeLetrasCEn("Facundo Cáceres"));
-			
-			
-			
 			Console.Write("Press any key to continue . . . ");
 			Console.ReadKey(true);
 		}
@@ -29,7 +26,7 @@ namespace Ejercicio4
 				return 1 + cantidadDeLetrasCEn(palabra, posActual + 1);
 			} 
 			
-			return 0 + cantidadDeLetrasCEn(palabra, posActual + 1);
+			return cantidadDeLetrasCEn(palabra, posActual + 1);
 			
 		}
 	}
