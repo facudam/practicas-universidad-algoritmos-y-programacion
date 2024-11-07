@@ -1,0 +1,6 @@
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica8Recursividad\Ejercicio7\bin\Debug\Ejercicio7.exe.config
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica8Recursividad\Ejercicio7\bin\Debug\Ejercicio7.exe
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica8Recursividad\Ejercicio7\bin\Debug\Ejercicio7.pdb
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica8Recursividad\Ejercicio7\obj\Debug\Ejercicio7.csprojResolveAssemblyReference.cache
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica8Recursividad\Ejercicio7\obj\Debug\Ejercicio7.exe
+C:\Users\USURIO\Documents\SharpDevelop Projects\algoritmosYprogramacion\Practica8Recursividad\Ejercicio7\obj\Debug\Ejercicio7.pdb
